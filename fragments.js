@@ -3,7 +3,7 @@ window.FRAGMENTS = [
   
     "title": "Pomme / Apple ",
     "inktoberDay": 1,
-    "image": "assets/images/Pomme.jpg",
+    "image": "Pomme.jpg",
     "text": "Tout a commencé avec une pomme, un moment de tentation, mais ça n’a pas été un choix fait en pleine conscience… et cela n’était que le début.",
     "tiktok": "https://www.tiktok.com/@korara_art/video/7691751088088894723"
   },
