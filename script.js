@@ -6,7 +6,7 @@ let dragged = null;
 
 function imageFor(item){ return item.image; }
 function openFragment(item){
-  document.querySelector("#dialog-day").textContent = `FRAGMENT ${item.order} · INKTOBER ${item.inktoberDay}`;
+  document.querySelector("#dialog-day").textContent =· INKTOBER ${item.inktoberDay}`;
   document.querySelector("#dialog-title").textContent = item.title;
   document.querySelector("#dialog-image").src = imageFor(item);
   document.querySelector("#dialog-image").alt = `Illustration ${item.title}`;
