@@ -1,11 +1,11 @@
 window.FRAGMENTS = [
   {
     "order": 1,
-    "title": "Miniature",
-    "inktoberDay": 3,
-    "image": "assets/images/jour-03.jpg",
-    "text": "[COLLER ICI LE TEXTE DU JOUR 3]",
-    "tiktok": ""
+    "title": "Pomme / Apple ",
+    "inktoberDay": 1,
+    "image": "assets/images/Pomme",
+    "text": "Tout a commencé avec une pomme, un moment de tentation, mais ça n’a pas été un choix fait en pleine conscience… et cela n’était que le début.",
+    "tiktok": "https://www.tiktok.com/@korara_art/video/7691751088088894723"
   },
   {
     "order": 2,
