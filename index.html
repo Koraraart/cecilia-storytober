@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee5d3">
+  <title>Cécilia — Carnet d'une vie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#accueil">CÉCILIA <span>· carnet d'une vie</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="#histoire">Le récit</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#apropos">Le projet</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow">UNE HISTOIRE EN 31 FRAGMENTS</p>
+        <h1>Cécilia</h1>
+        <p class="subtitle">Carnet d'une vie, d'un mariage et d'une renaissance.</p>
+        <p class="intro">Trente et un mots de l'Inktober réassemblés pour raconter une seule histoire : celle de Cécilia, de son éducation à sa reconstruction.</p>
+        <a class="primary-link" href="#histoire">Ouvrir le carnet <span>↗</span></a>
+      </div>
+      <div class="hero-stamp" aria-label="Archives illustrées">
+        <span class="stamp-top">ARCHIVES ILLUSTRÉES</span>
+        <span class="stamp-number">31</span>
+        <span class="stamp-bottom">FRAGMENTS · XIXe SIÈCLE</span>
+      </div>
+      <div class="hero-note">Un projet de storytelling illustré</div>
+    </section>
+
+    <section class="intro-band" id="apropos">
+      <p class="section-kicker">LE PRINCIPE</p>
+      <h2>Des prompts indépendants.<br><em>Un fil narratif à retrouver.</em></h2>
+      <p>Les mots de l'Inktober n'étaient pas conçus pour former une chronologie. Ici, ils deviennent les fragments d'une même existence. Le numéro entre parenthèses rappelle l'ordre original du prompt ; le numéro principal indique sa place dans le récit.</p>
+    </section>
+
+    <section class="section" id="histoire">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">LES PREMIERS FRAGMENTS</p>
+          <h2>Le récit illustré</h2>
+        </div>
+        <p class="section-aside">Prototype — 2 illustrations sur 31</p>
+      </div>
+      <div class="gallery" id="gallery">
+        <article class="art-card" tabindex="0" data-title="Héros" data-prompt="21" data-position="11" data-description="La rencontre avec Cécilia. Un premier geste de galanterie, au moment où deux destins se croisent.">
+          <button class="art-open" type="button" aria-label="Voir Héros en grand">
+            <img src="heros.jpg" alt="Illustration Héros : un homme en habit mauve baise la main d'une jeune femme." loading="lazy">
+          </button>
+          <div class="card-caption">
+            <div><span class="number">PLACE DANS LE RÉCIT · 11</span><h3>Héros</h3><p>Prompt Inktober n° 21</p></div>
+            <button class="text-button" type="button">Consulter la fiche ↗</button>
+          </div>
+        </article>
+        <article class="art-card" tabindex="0" data-title="Frimer" data-prompt="31" data-position="10" data-description="Avant sa rencontre avec Cécilia, le futur époux mène une vie mondaine, légère et séductrice.">
+          <button class="art-open" type="button" aria-label="Voir Frimer en grand">
+            <img src="frimer.jpg" alt="Illustration Frimer : un jeune homme en habit mauve prend une pose assurée." loading="lazy">
+          </button>
+          <div class="card-caption">
+            <div><span class="number">PLACE DANS LE RÉCIT · 10</span><h3>Frimer</h3><p>Prompt Inktober n° 31</p></div>
+            <button class="text-button" type="button">Consulter la fiche ↗</button>
+          </div>
+        </article>
+      </div>
+      <p class="small-note">Les légendes sont des propositions de présentation pour ce prototype ; elles pourront être modifiées selon ton intention.</p>
+    </section>
+
+    <section class="workshop" id="atelier">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">JEU DE RECONSTITUTION</p>
+          <h2>L'atelier des fragments</h2>
+        </div>
+        <span class="wax-seal">À VOUS<br>DE JOUER</span>
+      </div>
+      <p class="workshop-intro">Déplace les deux cartes pour explorer leur ordre. Pour l'instant, ce prototype ne contient que deux dessins : le jeu complet accueillera les 31 fragments.</p>
+      <div class="sortable" id="sortable">
+        <article class="sort-card" draggable="true" data-order="10">
+          <span class="drag-handle">⠿</span><span class="sort-index">A</span>
+          <div><strong>Frimer</strong><small>Prompt original · 31</small></div>
+          <span class="move-hint">Déplacer</span>
+        </article>
+        <article class="sort-card" draggable="true" data-order="11">
+          <span class="drag-handle">⠿</span><span class="sort-index">B</span>
+          <div><strong>Héros</strong><small>Prompt original · 21</small></div>
+          <span class="move-hint">Déplacer</span>
+        </article>
+      </div>
+      <div class="workshop-actions">
+        <button class="secondary-button" id="check-order" type="button">Vérifier cet ordre</button>
+        <button class="plain-button" id="reset-order" type="button">Mélanger à nouveau</button>
+      </div>
+      <p class="feedback" id="feedback" aria-live="polite">Indice : « Frimer » précède « Héros » dans ton récit.</p>
+    </section>
+
+    <footer>
+      <span>CÉCILIA · STORYTOBER</span>
+      <span>31 prompts · une histoire à reconstruire</span>
+    </footer>
+  </main>
+
+  <dialog id="art-dialog">
+    <button class="dialog-close" type="button" aria-label="Fermer">×</button>
+    <img id="dialog-image" src="" alt="">
+    <div class="dialog-copy">
+      <p class="section-kicker" id="dialog-meta"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <p class="tiktok-note">Vidéo TikTok : lien à ajouter lorsque tu me transmettras l'adresse de la publication.</p>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
