@@ -1,16 +1,16 @@
 window.FRAGMENTS = [
   {
-    "id": "day-03",
-    "title": "Miniature",
-    "inktoberDay": 3,
-    "image": "assets/images/jour-03.jpg",
-    "text": "Quel sentiment si rare et si agréable ! C’est l’un des premiers souvenirs de Cécilia et son souvenir le plus cher. Son père lui a offert cette magnifique maison miniature. C’est l’un des rares moments de véritable bonheur de sa vie.",
-    "tiktok": ""
+    "id": "day-01",
+    "title": "Pomme",
+    "inktoberDay": 1,
+    "image": "assets/images/Pomme.jpg",
+    "text": "Tout a commencé avec une pomme, un moment de tentation, mais ça n’a pas été un choix fait en pleine conscience… et cela n’était que le début.",
+    "tiktok": "https://www.tiktok.com/@korara_art/video/7691751088088894723"
   },
   {
-    "id": "day-16",
-    "title": "Dégingandé",
-    "inktoberDay": 16,
+    "id": "day-02",
+    "title": "Relique",
+    "inktoberDay": 2,
     "image": "assets/images/jour-16.jpg",
     "text": "On avait ébranlé ses convictions et sa confiance en elle. Comment avaient-ils osé lui reprocher son manque de prestance, alors qu’ils étaient précisément ceux qui lui avaient retiré tout appui ?",
     "tiktok": ""
