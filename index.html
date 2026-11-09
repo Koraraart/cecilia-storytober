@@ -1,18 +1,26 @@
+
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Cécilia — une histoire en 31 fragments.">
+
   <title>Cécilia — Une histoire en 31 fragments</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header class="topbar">
     <a class="brand" href="#accueil">CÉCILIA</a>
+
     <nav aria-label="Navigation principale">
       <a href="#presentation">Présentation</a>
       <a href="#projet">Le projet</a>
@@ -22,12 +30,18 @@
   </header>
 
   <main>
+
     <section class="hero" id="accueil">
       <div class="hero-inner">
         <p class="eyebrow">Une histoire en 31 fragments</p>
         <h1>Cécilia</h1>
-        <p class="hero-intro">Une vie, des fragments, une histoire à reconstituer.</p>
-        <a class="button" href="#jeu">Reconstituer l’histoire <span aria-hidden="true">↗</span></a>
+        <p class="hero-intro">
+          Une vie, des fragments, une histoire à reconstituer.
+        </p>
+        <a class="button" href="#jeu">
+          Reconstituer l’histoire
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
 
@@ -35,10 +49,24 @@
       <div class="section-inner">
         <p class="eyebrow">Présentation</p>
         <h2>Une vie en fragments.</h2>
+
         <div class="intro-copy">
-          <p>Cécilia vit à la fin du XIXe siècle. Je vous invite à suivre sa vie malheureuse, ses hauts, ses bas, ce que le monde lui fera subir et comment elle s’en relèvera... peut-être…</p>
-          <p>Sa vie se dévoilera à vous par différents fragments.</p>
-          <p>Inspirés des prompts/thèmes de l’Inktober 2026, ces fragments sont présentés dans l’ordre des jours du défi. À vous de découvrir comment ils s’assemblent véritablement.</p>
+          <p>
+            Cécilia vit à la fin du XIXe siècle. Je vous invite à suivre
+            sa vie malheureuse, ses hauts, ses bas, ce que le monde lui
+            fera subir et comment elle s’en relèvera... peut-être…
+          </p>
+
+          <p>
+            Sa vie se dévoilera à vous par différents fragments.
+          </p>
+
+          <p>
+            Inspirés des prompts/thèmes de l’Inktober 2026,
+            ces fragments sont présentés dans l’ordre des jours
+            du défi. À vous de découvrir comment ils s’assemblent
+            véritablement.
+          </p>
         </div>
       </div>
     </section>
@@ -50,7 +78,12 @@
             <p class="eyebrow">Le projet</p>
             <h2>31 jours, 31 fragments.</h2>
           </div>
-          <p>Chaque dessin est un morceau de l’histoire de Cécilia. Parcourez la galerie dans l’ordre des jours de l’Inktober, découvrez les textes et ouvrez les images pour les voir en grand.</p>
+
+          <p>
+            Chaque dessin est un morceau de l’histoire de Cécilia.
+            Parcourez la galerie dans l’ordre des jours de l’Inktober,
+            découvrez les textes et ouvrez les images pour les voir en grand.
+          </p>
         </div>
       </div>
     </section>
@@ -65,27 +98,67 @@
 
     <section class="section game" id="jeu">
       <div class="section-inner">
+
         <p class="eyebrow">À vous de jouer</p>
         <h2>Reconstituer l’histoire</h2>
-        <p class="game-lead">Les fragments de sa vie ont été dispersés. Saurez-vous retrouver le fil de la vie de Cécilia ?</p>
-        <div class="instructions"><strong>Comment jouer ?</strong>Faites glisser les cartes pour les remettre dans l’ordre chronologique. Les cartes sont mélangées à chaque partie. Aucun numéro ne révèle leur place dans l’histoire.</div>
-        <div class="game-tools">
-          <button class="button" id="shuffleButton" type="button">Mélanger les cartes ↻</button>
-          <button class="button secondary" id="checkButton" type="button">Vérifier l’ordre</button>
-          <span class="game-status" id="gameStatus" aria-live="polite">Déplacez les cartes pour commencer.</span>
+
+        <p class="game-lead">
+          Les fragments de sa vie ont été dispersés.
+          Saurez-vous retrouver le fil de la vie de Cécilia ?
+        </p>
+
+        <div class="instructions">
+          <strong>Comment jouer ?</strong>
+          Faites glisser les cartes pour les remettre dans l’ordre
+          chronologique de la vie de Cécilia. Les cartes sont mélangées
+          à chaque partie. Leur numéro dans la galerie ne révèle pas
+          leur place dans l’histoire.
         </div>
-        <div class="word-list" id="wordList" aria-label="Fragments à remettre dans l’ordre"></div>
+
+        <div class="game-tools">
+          <button class="button" id="shuffleButton" type="button">
+            Mélanger les cartes ↻
+          </button>
+
+          <button class="button secondary" id="checkButton" type="button">
+            Vérifier l’ordre
+          </button>
+
+          <span class="game-status" id="gameStatus" aria-live="polite">
+            Déplacez les cartes pour commencer.
+          </span>
+        </div>
+
+        <div
+          class="word-list"
+          id="wordList"
+          aria-label="Fragments à remettre dans l’ordre"
+        ></div>
+
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">CÉCILIA · UNE HISTOIRE EN 31 FRAGMENTS</footer>
+  <footer class="footer">
+    CÉCILIA · UNE HISTOIRE EN 31 FRAGMENTS
+  </footer>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
-    <button type="button" id="closeLightbox" aria-label="Fermer">×</button>
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image agrandie"
+  >
+    <button type="button" id="closeLightbox" aria-label="Fermer">
+      ×
+    </button>
+
     <img id="lightboxImage" src="" alt="">
   </div>
 
-    <script src="script.js" defer></script>
+  <script src="script.js?v=2" defer></script>
+
 </body>
 </html>
