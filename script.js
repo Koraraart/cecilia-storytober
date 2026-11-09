@@ -21,13 +21,13 @@ const fragments = [
 
   { day: 7, title: "Panique", text: "Soudainement, à l’aube, Cécilia a été placé dans une calèche. On avait préféré ne pas lui dire la date du départ… Seule, regardant le paysage, elle dit adieu à sa vie d’avant, à ses repères, elle ne peut s’empêcher de pleurer. Elle se rend…chez cet homme…cet ogre.", image: "images/Panique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694385902243679510" },
 
-  { day: 8, title: "Puant", text: "Ajoute ici le texte de ce fragment.", image: "images/Puant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694388725706509590" },
+  { day: 8, title: "Puant", text: "Il lui a acheté ce bouquet, comme pour la détourner d’une plus funeste vérité, comme s’il essayait de se racheter une conscience auprès d’elle, elle les garde précieusement, elle s’y accroche… mais elles pourrissent lentement. ", image: "images/Puant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694388725706509590" },
 
-  { day: 9, title: "Bélier", text: "Ajoute ici le texte de ce fragment.", image: "images/Bélier.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694770808895327510" },
+  { day: 9, title: "Bélier", text: "Ils ont voulu la sacrifier sur l’autel de la bêtise humaine ! Sa famille lui avait demander l’impensable, d’offrir un héritier à un homme qui n’était autre que la lie de l’humanité, de satisfaire cet homme qui la dégoutait jusque dans la moindre fibre de son être tout, ça pour garantir la survie de sa famille ou du moins préserver les apparences…", image: "images/Bélier.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694770808895327510" },
 
-  { day: 10, title: "Mystique", text: "Ajoute ici le texte de ce fragment.", image: "images/Mystique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695128532929826070" },
+  { day: 10, title: "Mystique", text: "Où tout cela allait-il la mener ? Elle avait décidé de s’éloigner, de se recentrer sur elle-même. Ce cadre était l’un des rares refuges à sa portée, après le décès… et les affres de son mari… Mais est-ce une fin en soi, de finalement s'éloigner définitivement du monde ? ", image: "images/Mystique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695128532929826070" },
 
-  { day: 11, title: "Sauvetage", text: "Ajoute ici le texte de ce fragment.", image: "images/Sauvetage.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695499891212078358" },
+  { day: 11, title: "Sauvetage", text: "Le mariage a été annulé, la famille de Cécila avait finalement abandonné cette idée, tout ça grâce à un gentilhomme qui avait su confondre le monstre. Elle n’était plus seule, il l’avait sauvée de ce qu’elle considérait comme sa propre mort….", image: "images/Sauvetage.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695499891212078358" },
 
   { day: 12, title: "Jeter", text: "Ajoute ici le texte de ce fragment.", image: "images/Jeter.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695862206491069718" },
 
