@@ -334,7 +334,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* GRILLE DES 31 POSITIONS */
+/* GRILLE DES EMPLACEMENTS FIXES */
 
 .word-list {
   display: grid;
@@ -343,23 +343,71 @@ h1 {
   align-items: stretch;
 }
 
-/* CARTE DU JEU */
+/* CHAQUE EMPLACEMENT GARDE SON NUMERO */
 
-.word-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 38px minmax(0,1fr) auto;
-  align-items: center;
-  gap: 11px;
+.game-slot {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
   min-width: 0;
   min-height: 76px;
-  padding: 12px;
-  border: 1px solid #716763;
-  background: #40393b;
-  color: #fffaf4;
+  padding: 9px;
+  border: 1px solid rgba(185, 162, 198, 0.35);
+  border-radius: 7px;
+  background: rgba(255, 250, 244, 0.04);
+  transition: border-color .2s ease, background .2s ease;
+}
+
+.game-slot.drag-over {
+  border-color: var(--cyan);
+  background: rgba(159, 201, 202, 0.12);
+}
+
+/* NUMERO DORE FIXE */
+
+.slot-number {
+  display: flex;
+  flex: 0 0 38px;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 5px;
+  background: var(--gold);
+  color: var(--ink);
+  font: 700 15px var(--sans);
+}
+
+/* CARTE DE THEME DEPLACABLE */
+
+.word-card {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 54px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgba(185, 162, 198, 0.55);
+  border-radius: 5px;
+  background: var(--ink-soft);
+  color: var(--white);
+  font: 600 19px/1.2 var(--serif);
+  text-align: center;
+  overflow-wrap: anywhere;
   cursor: grab;
   user-select: none;
-  transition: border-color .2s ease, background .2s ease, opacity .2s ease;
+  touch-action: manipulation;
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+.word-card:hover {
+  border-color: var(--violet);
+  background: #51474b;
 }
 
 .word-card:active {
@@ -367,72 +415,16 @@ h1 {
 }
 
 .word-card.dragging {
-  opacity: .4;
+  opacity: .45;
 }
 
-.word-card.over {
-  border-color: var(--cyan);
+.word-card.selected {
+  border: 2px solid var(--cyan);
   background: #51474b;
-  outline: 2px solid var(--cyan);
-  outline-offset: -2px;
+  transform: scale(1.025);
 }
 
-/* NUMÉRO DE POSITION */
-
-.position-number {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--gold);
-  color: var(--ink);
-  font: 700 15px var(--sans);
-  flex-shrink: 0;
-}
-
-.word-card .grip {
-  display: none;
-}
-
-.word-card .card-title {
-  min-width: 0;
-  font: 600 19px/1.2 var(--serif);
-  overflow-wrap: anywhere;
-}
-
-/* BOUTONS POUR DÉPLACER LES CARTES */
-
-.move-controls {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.move-controls button {
-  width: 29px;
-  height: 29px;
-  padding: 0;
-  border: 1px solid #817875;
-  border-radius: 3px;
-  background: transparent;
-  color: var(--white);
-  font: 700 17px var(--sans);
-  cursor: pointer;
-  transition: .2s ease;
-}
-
-.move-controls button:hover:not(:disabled) {
-  border-color: var(--cyan);
-  background: var(--cyan-deep);
-}
-
-.move-controls button:disabled {
-  opacity: .3;
-  cursor: not-allowed;
-}
-
-.word-card button:focus-visible {
+.word-card:focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 3px;
 }
@@ -499,7 +491,7 @@ h1 {
   }
 }
 
-/* TÉLÉPHONES */
+/* TELEPHONES */
 
 @media (max-width: 560px) {
   .topbar {
@@ -532,8 +524,13 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .word-card {
+  .game-slot {
     min-height: 68px;
+  }
+
+  .word-card {
+    min-height: 54px;
+    font-size: 18px;
   }
 
   .section {
