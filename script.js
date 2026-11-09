@@ -19,55 +19,55 @@ const fragments = [
 
   { day: 6, title: "Ogre", text: "Vous savez tout s’achète, Cet homme…est répugnant, il fréquente les salons mondains, il a de multiples fiancées qu’il a fait parfois disparaitre, tout le monde rampe à ses pieds y compris les parents de Cécilia.", image: "images/Ogre.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7693630197089717526" },
 
-  { day: 7, title: "Panique", text: "Ajoute ici le texte de ce fragment.", image: "images/Panique.jpg", speedpaint: "" },
+  { day: 7, title: "Panique", text: "Ajoute ici le texte de ce fragment.", image: "images/Panique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694385902243679510" },
 
-  { day: 8, title: "Puant", text: "Ajoute ici le texte de ce fragment.", image: "images/Puant.jpg", speedpaint: "" },
+  { day: 8, title: "Puant", text: "Ajoute ici le texte de ce fragment.", image: "images/Puant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694388725706509590" },
 
-  { day: 9, title: "Bélier", text: "Ajoute ici le texte de ce fragment.", image: "images/Bélier.jpg", speedpaint: "" },
+  { day: 9, title: "Bélier", text: "Ajoute ici le texte de ce fragment.", image: "images/Bélier.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694770808895327510" },
 
-  { day: 10, title: "Mystique", text: "Ajoute ici le texte de ce fragment.", image: "images/Mystique.jpg", speedpaint: "" },
+  { day: 10, title: "Mystique", text: "Ajoute ici le texte de ce fragment.", image: "images/Mystique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695128532929826070" },
 
-  { day: 11, title: "Sauvetage", text: "Ajoute ici le texte de ce fragment.", image: "images/Sauvetage.jpg", speedpaint: "" },
+  { day: 11, title: "Sauvetage", text: "Ajoute ici le texte de ce fragment.", image: "images/Sauvetage.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695499891212078358" },
 
-  { day: 12, title: "Jeter", text: "Ajoute ici le texte de ce fragment.", image: "images/Jeter.jpg", speedpaint: "" },
+  { day: 12, title: "Jeter", text: "Ajoute ici le texte de ce fragment.", image: "images/Jeter.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695862206491069718" },
 
-  { day: 13, title: "Fragile", text: "Ajoute ici le texte de ce fragment.", image: "images/Fragile.jpg", speedpaint: "" },
+  { day: 13, title: "Fragile", text: "Ajoute ici le texte de ce fragment.", image: "images/Fragile.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696234449637346582" },
 
-  { day: 14, title: "Dame", text: "Ajoute ici le texte de ce fragment.", image: "images/Dame.jpg", speedpaint: "" },
+  { day: 14, title: "Dame", text: "Ajoute ici le texte de ce fragment.", image: "images/Dame.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696680854038367510" },
 
-  { day: 15, title: "Hourra", text: "Ajoute ici le texte de ce fragment.", image: "images/Hourra.jpg", speedpaint: "" },
+  { day: 15, title: "Hourra", text: "Ajoute ici le texte de ce fragment.", image: "images/Hourra.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696993034726100246" },
 
-  { day: 16, title: "Dégingandé", text: "Ajoute ici le texte de ce fragment.", image: "images/Dégingandé.jpg", speedpaint: "" },
+  { day: 16, title: "Dégingandé", text: "Ajoute ici le texte de ce fragment.", image: "images/Dégingandé.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697358167436479766" },
 
-  { day: 17, title: "Bidule", text: "Ajoute ici le texte de ce fragment.", image: "images/Bidule.jpg", speedpaint: "" },
+  { day: 17, title: "Bidule", text: "Ajoute ici le texte de ce fragment.", image: "images/Bidule.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697727988544097558" },
 
-  { day: 18, title: "Sans ailes", text: "Ajoute ici le texte de ce fragment.", image: "images/Sans ailes.jpg", speedpaint: "" },
+  { day: 18, title: "Sans ailes", text: "Ajoute ici le texte de ce fragment.", image: "images/Sans ailes.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698106802579279126" },
 
-  { day: 19, title: "Confus", text: "Ajoute ici le texte de ce fragment.", image: "images/Confus.jpg", speedpaint: "" },
+  { day: 19, title: "Confus", text: "Ajoute ici le texte de ce fragment.", image: "images/Confus.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698480804846161155" },
 
-  { day: 20, title: "Salon", text: "Ajoute ici le texte de ce fragment.", image: "images/Salon.jpg", speedpaint: "" },
+  { day: 20, title: "Salon", text: "Ajoute ici le texte de ce fragment.", image: "images/Salon.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698840121424104726" },
 
-  { day: 21, title: "Héros", text: "Ajoute ici le texte de ce fragment.", image: "images/Héros.jpg", speedpaint: "" },
+  { day: 21, title: "Héros", text: "Ajoute ici le texte de ce fragment.", image: "images/Héros.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699216959627480323" },
 
-  { day: 22, title: "Phare", text: "Ajoute ici le texte de ce fragment.", image: "images/Phare.jpg", speedpaint: "" },
+  { day: 22, title: "Phare", text: "Ajoute ici le texte de ce fragment.", image: "images/Phare.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699591052738530582" },
 
-  { day: 23, title: "Élégant", text: "Ajoute ici le texte de ce fragment.", image: "images/Elegant.jpg", speedpaint: "" },
+  { day: 23, title: "Élégant", text: "Ajoute ici le texte de ce fragment.", image: "images/Elegant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699964921743805698" },
 
-  { day: 24, title: "Cuisiner", text: "Ajoute ici le texte de ce fragment.", image: "images/Cuisiner.jpg", speedpaint: "" },
+  { day: 24, title: "Cuisiner", text: "Ajoute ici le texte de ce fragment.", image: "images/Cuisiner.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7700314598720785686" },
 
-  { day: 25, title: "Fracture", text: "Remplace par ton titre et ton texte.", image: "images/Fracture.jpg", speedpaint: "" },
+  { day: 25, title: "Fracture", text: "Remplace par ton titre et ton texte.", image: "images/Fracture.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7700705276139293974" },
 
-  { day: 26, title: "Zip", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-26.jpg", speedpaint: "" },
+  { day: 26, title: "Zip", text: "Remplace par ton titre et ton texte.", image: "images/Zip.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701117759459036418" },
 
-  { day: 27, title: "Stupide", text: "Remplace par ton titre et ton texte.", image: "images/Zip.jpg", speedpaint: "" },
+  { day: 27, title: "Stupide", text: "Remplace par ton titre et ton texte.", image: "images/Stupide.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701550773167017238" },
 
-  { day: 28, title: "Trophée", text: "Remplace par ton titre et ton texte.", image: "images/Trophée.jpg", speedpaint: "" },
+  { day: 28, title: "Trophée", text: "Remplace par ton titre et ton texte.", image: "images/Trophée.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701845981234547990" },
 
-  { day: 29, title: "Défense d'éléphant", text: "Remplace par ton titre et ton texte.", image: "images/Défense d'éléphant.jpg", speedpaint: "" },
+  { day: 29, title: "Défense d'éléphant", text: "Remplace par ton titre et ton texte.", image: "images/Défense d'éléphant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702259191813115158" },
 
-  { day: 30, title: "Cookie", text: "Remplace par ton titre et ton texte.", image: "images/Cookie.jpg", speedpaint: "" },
+  { day: 30, title: "Cookie", text: "Remplace par ton titre et ton texte.", image: "images/Cookie.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702628700931689730" },
 
-  { day: 31, title: "Frimer", text: "Remplace par ton titre et ton texte.", image: "images/Frimer.jpg", speedpaint: "" }
+  { day: 31, title: "Frimer", text: "Remplace par ton titre et ton texte.", image: "images/Frimer.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702963852371053846" }
 ];
 
 
