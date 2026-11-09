@@ -29,45 +29,45 @@ const fragments = [
 
   { day: 11, title: "Sauvetage", text: "Le mariage a été annulé, la famille de Cécila avait finalement abandonné cette idée, tout ça grâce à un gentilhomme qui avait su confondre le monstre. Elle n’était plus seule, il l’avait sauvée de ce qu’elle considérait comme sa propre mort….", image: "images/Sauvetage.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695499891212078358" },
 
-  { day: 12, title: "Jeter", text: "Ajoute ici le texte de ce fragment.", image: "images/Jeter.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695862206491069718" },
+  { day: 12, title: "Jeter", text: "On aurait pu la pousser, sa tête aurait pu heurter le sol, que cela ne lui aurait pas fait plus mal. Comment peut-on parfois nous faire sentir si insignifiants qu’on en vient à avoir l’impression que le monde entier nous traite avec dédain ?", image: "images/Jeter.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7695862206491069718" },
 
-  { day: 13, title: "Fragile", text: "Ajoute ici le texte de ce fragment.", image: "images/Fragile.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696234449637346582" },
+  { day: 13, title: "Fragile", text: "Son corps va lâcher …son corps a atteint sa limite de résistance, à force d’encaisser, parfois on finit tous simplement geler. Ce n’est pas de la fragilité, de la faiblesse c’est un témoignage d’une résilience défiant toutes concurrences.", image: "images/Fragile.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696234449637346582" },
 
-  { day: 14, title: "Dame", text: "Ajoute ici le texte de ce fragment.", image: "images/Dame.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696680854038367510" },
+  { day: 14, title: "Dame", text: "Un portrait… une nouvelle page dans la vie de Cécilia, le passage de la jeune fille à la maîtresse de maison. Mais derrière cette nouvelle image, s’agit-il d’une véritable évolution personnelle ou simplement d’un rôle à endosser ?", image: "images/Dame.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696680854038367510" },
 
-  { day: 15, title: "Hourra", text: "Ajoute ici le texte de ce fragment.", image: "images/Hourra.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696993034726100246" },
+  { day: 15, title: "Hourra", text: "Félicitations ! Félicitations ! Hourra ! Hourra ! Le mariage….hein ? Jusqu’où tiendra l’état de grâce, cette douce et stupide euphorie précédant le si redouté retour à la réalité.", image: "images/Hourra.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696993034726100246" },
 
-  { day: 16, title: "Dégingandé", text: "Ajoute ici le texte de ce fragment.", image: "images/Dégingandé.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697358167436479766" },
+  { day: 16, title: "Dégingandé", text: "On avait ébranlé ses convictions et sa confiance en elle. Comment avaient-ils osé lui reprocher son manque de prestance, alors qu’ils étaient précisément ceux qui lui avaient retiré tout appui ?", image: "images/Dégingandé.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697358167436479766" },
 
-  { day: 17, title: "Bidule", text: "Ajoute ici le texte de ce fragment.", image: "images/Bidule.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697727988544097558" },
+  { day: 17, title: "Bidule", text: "Mais qu’est-ce que c’est que ça ?! Leurs attentes, ses peurs, le poids de ces vieilles familles et cette marotte incongrue qui semble les obnubiler, comme si les liens du sang leur conféraient un droit de regard sur l’intimité d’un couple, jusqu’à en faire une véritable affaire d’État.", image: "images/Bidule.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697727988544097558" },
 
-  { day: 18, title: "Sans ailes", text: "Ajoute ici le texte de ce fragment.", image: "images/Sans ailes.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698106802579279126" },
+  { day: 18, title: "Sans ailes", text: "Cécilia a dû composer avec les absences de son mari, ce dernier, perdu…découvrant une vie sans contraintes dans des salons embuées, berceau de tous les excès. Parmi toutes ces beautés aux tenues extravagantes, une au costume orné de grandes plumes attirait véritablement son attention.", image: "images/Sans ailes.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698106802579279126" },
 
-  { day: 19, title: "Confus", text: "Ajoute ici le texte de ce fragment.", image: "images/Confus.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698480804846161155" },
+  { day: 19, title: "Confus", text: "Au fur et à mesure, la nouvelle s’ébruita… Amis, connaissances et envieux finirent par être au courant des frasques de son mari. Bien vite, les murmures se transformèrent en moqueries, et Cécilia devint la cible des railleries, humiliée par les infidélités de celui qui, autrefois, l’avait sauvée et auprès duquel elle avait placé toute sa confiance.", image: "images/Confus.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698480804846161155" },
 
-  { day: 20, title: "Salon", text: "Ajoute ici le texte de ce fragment.", image: "images/Salon.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698840121424104726" },
+  { day: 20, title: "Salon", text: "Comme à son habitude, Cécilia s’installe dans le petit salon pour broder, c’est une activité qui apaise son esprit, son mari lui n’est pas présent il préfère les mondanités et les plaisirs d’une vie dissolue. ", image: "images/Salon.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7698840121424104726" },
 
-  { day: 21, title: "Héros", text: "Ajoute ici le texte de ce fragment.", image: "images/Héros.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699216959627480323" },
+  { day: 21, title: "Héros", text: "Lors d’un salon, Cécilia le rencontra pour la première fois. Tandis que tous gardaient leurs distances, nul n’osant l’approcher, lui s’autorisa une familiarité que sa promesse de mariage aurait dû lui interdire. Était-ce simple galanterie, une manière de capter l’attention de Cécilia, ou bien une provocation à l’égard de celui auquel elle était déjà promise ?", image: "images/Héros.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699216959627480323" },
 
-  { day: 22, title: "Phare", text: "Ajoute ici le texte de ce fragment.", image: "images/Phare.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699591052738530582" },
+  { day: 22, title: "Phare", text: "Seule, dans la nuit, perchée sur le phare face à la mer, elle contemple les flots déchaînés. Le vent lui fouette le visage, tandis que le grondement assourdissant des vagues lui fait oublier le tumulte de ses pensées.", image: "images/Phare.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699591052738530582" },
 
-  { day: 23, title: "Élégant", text: "Ajoute ici le texte de ce fragment.", image: "images/Elegant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699964921743805698" },
+  { day: 23, title: "Élégant", text: "Cecilia a cette façon bien à elle de se tenir, avec une grâce discrète dont le charme opère à son insu. Sa pose douce, et sa tendre retenue, la dotent d’une élégance à la fois modeste et captivante.", image: "images/Elegant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7699964921743805698" },
 
-  { day: 24, title: "Cuisiner", text: "Ajoute ici le texte de ce fragment.", image: "images/Cuisiner.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7700314598720785686" },
+  { day: 24, title: "Cuisiner", text: "On lui confia cette tâche pour la première fois. Nerveuse, Cécilia se mit aux fourneaux. On lui avait toujours appris que cuisiner était indigne de son rang. Pourtant, elle y a pris un plaisir inattendu. Cela l’amusa grandement de faire quelque chose de ses mains.", image: "images/Cuisiner.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7700314598720785686" },
 
-  { day: 25, title: "Fracture", text: "Remplace par ton titre et ton texte.", image: "images/Fracture.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7700705276139293974" },
+  { day: 25, title: "Fracture", text: "Son corps heurta violemment le sol. Une douleur fulgurante la traversa, ses os brisés, peut-être fracturés. Le souffle coupé, elle resta figée, immobile, les larmes se mêlant à la pluie. Seule, au pied du phare, elle n’attendait plus rien.", image: "images/Fracture.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7700705276139293974" },
 
-  { day: 26, title: "Zip", text: "Remplace par ton titre et ton texte.", image: "images/Zip.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701117759459036418" },
+  { day: 26, title: "Zip", text: "…", image: "images/Zip.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701117759459036418" },
 
-  { day: 27, title: "Stupide", text: "Remplace par ton titre et ton texte.", image: "images/Stupide.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701550773167017238" },
+  { day: 27, title: "Stupide", text: "Entre nous, qui sont les plus idiotes ?", image: "images/Stupide.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701550773167017238" },
 
-  { day: 28, title: "Trophée", text: "Remplace par ton titre et ton texte.", image: "images/Trophée.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701845981234547990" },
+  { day: 28, title: "Trophée", text: "Étonnamment à ce salon, il l’exhiba à son bras comme un trophée.", image: "images/Trophée.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7701845981234547990" },
 
-  { day: 29, title: "Défense d'éléphant", text: "Remplace par ton titre et ton texte.", image: "images/Défense d'éléphant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702259191813115158" },
+  { day: 29, title: "Défense d'éléphant", text: "Ces curiosités étaient la lubie du père de Cécilia, il consacrait un temps fou à sa collection…La pièce maitresse : une défense d’éléphant gravé venant de Birmanie.", image: "images/Défense d'éléphant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702259191813115158" },
 
-  { day: 30, title: "Cookie", text: "Remplace par ton titre et ton texte.", image: "images/Cookie.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702628700931689730" },
+  { day: 30, title: "Cookie", text: "Elle présenta fièrement ses biscuits aux nonnes du monastère. Leurs compliments et leurs sourires lui réchauffèrent le cœur : elle était tout simplement heureuse.", image: "images/Cookie.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702628700931689730" },
 
-  { day: 31, title: "Frimer", text: "Remplace par ton titre et ton texte.", image: "images/Frimer.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702963852371053846" }
+  { day: 31, title: "Frimer", text: "Avant de rencontrer Cécilia, il était connu pour avoir beaucoup de succès auprès des femmes, et évidemment, il en jouait parfois.", image: "images/Frimer.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7702963852371053846" }
 ];
 
 
