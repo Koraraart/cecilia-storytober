@@ -11,7 +11,7 @@ const fragments = [
 
   { day: 2, title: "Relique", text: "Mais qu’est-ce qu’il l’a amenée là ? A-t-elle été chassée ? Est-elle rentrée au monastère de Saint Cécile de son plein gré ? Une descente spirituelle ou une retraite nécessaire ?", image: "images/Relique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7692165707492085014" },
 
-  { day: 3, title: "Miniature", text: "Quel sentiment si rare et si agréable ! C’est l’un des premiers souvenirs de Cécilia et son souvenir le plus cherSon père lui a offert cette magnifique maison miniature. C’est l'un des rares moments de véritable bonheur de sa vie.", image: "images/Miniature.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7692518875254033686" },
+  { day: 3, title: "Miniature", text: "Quel sentiment si rare et si agréable ! C’est l’un des premiers souvenirs de Cécilia et son souvenir le plus cher. Son père lui a offert cette magnifique maison miniature. C’est l'un des rares moments de véritable bonheur de sa vie.", image: "images/Miniature.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7692518875254033686" },
 
   { day: 4, title: "Cactus", text: "Quel endroit inhospitalier… Une adolescente prise entre deux figures de cactus, leurs conflits incessants la blessent profondément, quand est-ce qu’une famille est devenue un lieu si douloureux et si peu accueillant ?", image: "images/Cactus.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7692891670404173078" },
 
