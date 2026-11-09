@@ -12,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 <body>
@@ -110,24 +110,19 @@
           <strong>Comment jouer ?</strong>
 
           <p>
-            Les 31 cartes sont mélangées. Replacez-les dans l'ordre
-            chronologique de la vie de Cécilia.
-          </p>
-
-          <p>
-            Le numéro doré indique la position de chaque carte dans
-            votre classement : 1, 2, 3… jusqu'à 31.
-          </p>
-
-          <p>
-            Sur ordinateur, lisez de gauche à droite, puis passez
-            à la ligne suivante. Sur téléphone, lisez de haut en bas.
+            Les 31 cartes sont mélangées au hasard dans les 31 cases.
+            Les numéros dorés restent toujours à leur place.
           </p>
 
           <p>
             Faites glisser une carte sur une autre pour échanger leurs
-            positions. Vous pouvez aussi utiliser les boutons − et +.
-            Le numéro de galerie Inktober ne révèle pas la réponse.
+            positions. Sur téléphone, touchez une carte, puis celle
+            avec laquelle vous souhaitez l'échanger.
+          </p>
+
+          <p>
+            Lisez les numéros de gauche à droite, puis passez à la ligne
+            suivante. Le numéro du jour Inktober ne révèle pas la réponse.
           </p>
         </div>
 
@@ -141,14 +136,14 @@
           </button>
 
           <span class="game-status" id="gameStatus" aria-live="polite">
-            Déplacez les cartes pour commencer.
+            Les cartes ont été mélangées. À vous de jouer !
           </span>
         </div>
 
         <div
           class="word-list"
           id="wordList"
-          aria-label="Fragments à remettre dans l’ordre"
+          aria-label="Grille des 31 fragments à remettre dans l’ordre"
         ></div>
 
       </div>
@@ -174,7 +169,7 @@
     <img id="lightboxImage" src="" alt="">
   </div>
 
-  <script src="script.js?v=3" defer></script>
+  <script src="script.js?v=4" defer></script>
 
 </body>
 </html>
