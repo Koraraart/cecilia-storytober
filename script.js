@@ -11,7 +11,7 @@
 
     const fragments = [
       { day: 1,  title: "Pomme", text: "Tout a commencé avec une pomme, un moment de tentation, mais ça n’a pas été un choix fait en pleine conscience… et cela n’était que le début. ", image: "images/Pomme.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7691751088088894723" },
-      { day: 2,  title: "Relique", text: "Ajoute ici le texte de ce fragment.", image: "images/Relique.jpg", speedpaint: "" },
+      { day: 2,  title: "Relique", text: "Mais qu’est-ce qu’il l’a amenée là ? A-t-elle été chassée ? Est-elle rentrée au monastère de Saint Cécile de son plein gré ? Une descente spirituelle ou une retraite nécessaire ?", image: "images/Relique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7692165707492085014" },
       { day: 3,  title: "Miniature", text: "Ajoute ici le texte de ce fragment.", image: "images/Cactus.jpg", speedpaint: "" },
       { day: 4,  title: "Cactus", text: "Ajoute ici le texte de ce fragment.", image: "images/.jpg", speedpaint: "" },
       { day: 5,  title: "Claque", text: "Ajoute ici le texte de ce fragment.", image: "images/Zip.jpg", speedpaint: "" },
