@@ -19,55 +19,55 @@ const fragments = [
 
   { day: 6, title: "Ogre", text: "Vous savez tout s’achète, Cet homme…est répugnant, il fréquente les salons mondains, il a de multiples fiancées qu’il a fait parfois disparaitre, tout le monde rampe à ses pieds y compris les parents de Cécilia.", image: "images/Ogre.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7693630197089717526" },
 
-  { day: 7, title: "Panique", text: "Ajoute ici le texte de ce fragment.", image: "images/Cuisiner.jpg", speedpaint: "" },
+  { day: 7, title: "Panique", text: "Ajoute ici le texte de ce fragment.", image: "images/Panique.jpg", speedpaint: "" },
 
-  { day: 8, title: "Puant", text: "Ajoute ici le texte de ce fragment.", image: "images/Claque.jpg", speedpaint: "" },
+  { day: 8, title: "Puant", text: "Ajoute ici le texte de ce fragment.", image: "images/Puant.jpg", speedpaint: "" },
 
-  { day: 9, title: "Bélier", text: "Ajoute ici le texte de ce fragment.", image: "images/Fragile.jpg", speedpaint: "" },
+  { day: 9, title: "Bélier", text: "Ajoute ici le texte de ce fragment.", image: "images/Bélier.jpg", speedpaint: "" },
 
   { day: 10, title: "Mystique", text: "Ajoute ici le texte de ce fragment.", image: "images/Mystique.jpg", speedpaint: "" },
 
-  { day: 11, title: "Sauvetage", text: "Ajoute ici le texte de ce fragment.", image: "images/Trophee.jpg", speedpaint: "" },
+  { day: 11, title: "Sauvetage", text: "Ajoute ici le texte de ce fragment.", image: "images/Sauvetage.jpg", speedpaint: "" },
 
-  { day: 12, title: "Jeter", text: "Ajoute ici le texte de ce fragment.", image: "images/Salon.jpg", speedpaint: "" },
+  { day: 12, title: "Jeter", text: "Ajoute ici le texte de ce fragment.", image: "images/Jeter.jpg", speedpaint: "" },
 
-  { day: 13, title: "Fragile", text: "Ajoute ici le texte de ce fragment.", image: "images/Belier.jpg", speedpaint: "" },
+  { day: 13, title: "Fragile", text: "Ajoute ici le texte de ce fragment.", image: "images/Fragile.jpg", speedpaint: "" },
 
-  { day: 14, title: "Dame", text: "Ajoute ici le texte de ce fragment.", image: "images/Puant.jpg", speedpaint: "" },
+  { day: 14, title: "Dame", text: "Ajoute ici le texte de ce fragment.", image: "images/Dame.jpg", speedpaint: "" },
 
-  { day: 15, title: "Hourra", text: "Ajoute ici le texte de ce fragment.", image: "images/Confus.jpg", speedpaint: "" },
+  { day: 15, title: "Hourra", text: "Ajoute ici le texte de ce fragment.", image: "images/Hourra.jpg", speedpaint: "" },
 
-  { day: 16, title: "Dégingandé", text: "Ajoute ici le texte de ce fragment.", image: "images/Sans-ailes.jpg", speedpaint: "" },
+  { day: 16, title: "Dégingandé", text: "Ajoute ici le texte de ce fragment.", image: "images/Dégingandé.jpg", speedpaint: "" },
 
-  { day: 17, title: "Bidule", text: "Ajoute ici le texte de ce fragment.", image: "images/Phare.jpg", speedpaint: "" },
+  { day: 17, title: "Bidule", text: "Ajoute ici le texte de ce fragment.", image: "images/Bidule.jpg", speedpaint: "" },
 
-  { day: 18, title: "Sans ailes", text: "Ajoute ici le texte de ce fragment.", image: "images/Fracture.jpg", speedpaint: "" },
+  { day: 18, title: "Sans ailes", text: "Ajoute ici le texte de ce fragment.", image: "images/Sans ailes.jpg", speedpaint: "" },
 
-  { day: 19, title: "Confus", text: "Ajoute ici le texte de ce fragment.", image: "images/Panique.jpg", speedpaint: "" },
+  { day: 19, title: "Confus", text: "Ajoute ici le texte de ce fragment.", image: "images/Confus.jpg", speedpaint: "" },
 
-  { day: 20, title: "Salon", text: "Ajoute ici le texte de ce fragment.", image: "images/Hourra.jpg", speedpaint: "" },
+  { day: 20, title: "Salon", text: "Ajoute ici le texte de ce fragment.", image: "images/Salon.jpg", speedpaint: "" },
 
-  { day: 21, title: "Héros", text: "Ajoute ici le texte de ce fragment.", image: "images/Elegant.jpg", speedpaint: "" },
+  { day: 21, title: "Héros", text: "Ajoute ici le texte de ce fragment.", image: "images/Héros.jpg", speedpaint: "" },
 
-  { day: 22, title: "Phare", text: "Ajoute ici le texte de ce fragment.", image: "images/Cookie.jpg", speedpaint: "" },
+  { day: 22, title: "Phare", text: "Ajoute ici le texte de ce fragment.", image: "images/Phare.jpg", speedpaint: "" },
 
-  { day: 23, title: "Élégant", text: "Ajoute ici le texte de ce fragment.", image: "images/Relique-2.jpg", speedpaint: "" },
+  { day: 23, title: "Élégant", text: "Ajoute ici le texte de ce fragment.", image: "images/Elegant.jpg", speedpaint: "" },
 
-  { day: 24, title: "Cuisiner", text: "Ajoute ici le texte de ce fragment.", image: "images/Stupide.jpg", speedpaint: "" },
+  { day: 24, title: "Cuisiner", text: "Ajoute ici le texte de ce fragment.", image: "images/Cuisiner.jpg", speedpaint: "" },
 
-  { day: 25, title: "Fracture", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-25.jpg", speedpaint: "" },
+  { day: 25, title: "Fracture", text: "Remplace par ton titre et ton texte.", image: "images/Fracture.jpg", speedpaint: "" },
 
   { day: 26, title: "Zip", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-26.jpg", speedpaint: "" },
 
-  { day: 27, title: "Stupide", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-27.jpg", speedpaint: "" },
+  { day: 27, title: "Stupide", text: "Remplace par ton titre et ton texte.", image: "images/Zip.jpg", speedpaint: "" },
 
-  { day: 28, title: "Trophée", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-28.jpg", speedpaint: "" },
+  { day: 28, title: "Trophée", text: "Remplace par ton titre et ton texte.", image: "images/Trophée.jpg", speedpaint: "" },
 
-  { day: 29, title: "Défense d'éléphant", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-29.jpg", speedpaint: "" },
+  { day: 29, title: "Défense d'éléphant", text: "Remplace par ton titre et ton texte.", image: "images/Défense d'éléphant.jpg", speedpaint: "" },
 
-  { day: 30, title: "Cookie", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-30.jpg", speedpaint: "" },
+  { day: 30, title: "Cookie", text: "Remplace par ton titre et ton texte.", image: "images/Cookie.jpg", speedpaint: "" },
 
-  { day: 31, title: "Frimer", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-31.jpg", speedpaint: "" }
+  { day: 31, title: "Frimer", text: "Remplace par ton titre et ton texte.", image: "images/Frimer.jpg", speedpaint: "" }
 ];
 
 
