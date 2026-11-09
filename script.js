@@ -35,7 +35,7 @@ const fragments = [
 
   { day: 14, title: "Dame", text: "Un portrait… une nouvelle page dans la vie de Cécilia, le passage de la jeune fille à la maîtresse de maison. Mais derrière cette nouvelle image, s’agit-il d’une véritable évolution personnelle ou simplement d’un rôle à endosser ?", image: "images/Dame.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696680854038367510" },
 
-  { day: 15, title: "Hourra", text: "Félicitations ! Félicitations ! Hourra ! Hourra ! Le mariage….hein ? Jusqu’où tiendra l’état de grâce, cette douce et stupide euphorie précédant le si redouté retour à la réalité.", image: "images/Hourra.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696993034726100246" },
+  { day: 15, title: "Hourra", text: "Félicitations ! Félicitations ! Hourra ! Hourra ! Le mariage….hein ? Jusqu’où tiendra l’état de grâce, cette douce et stupide euphorie précédant le si redouté retour à la réalité.", image: "images/Houra.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7696993034726100246" },
 
   { day: 16, title: "Dégingandé", text: "On avait ébranlé ses convictions et sa confiance en elle. Comment avaient-ils osé lui reprocher son manque de prestance, alors qu’ils étaient précisément ceux qui lui avaient retiré tout appui ?", image: "images/Dégingandé.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7697358167436479766" },
 
