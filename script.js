@@ -19,7 +19,7 @@ const fragments = [
 
   { day: 6, title: "Ogre", text: "Vous savez tout s’achète, Cet homme…est répugnant, il fréquente les salons mondains, il a de multiples fiancées qu’il a fait parfois disparaitre, tout le monde rampe à ses pieds y compris les parents de Cécilia.", image: "images/Ogre.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7693630197089717526" },
 
-  { day: 7, title: "Panique", text: "Ajoute ici le texte de ce fragment.", image: "images/Panique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694385902243679510" },
+  { day: 7, title: "Panique", text: "Soudainement, à l’aube, Cécilia a été placé dans une calèche. On avait préféré ne pas lui dire la date du départ… Seule, regardant le paysage, elle dit adieu à sa vie d’avant, à ses repères, elle ne peut s’empêcher de pleurer. Elle se rend…chez cet homme…cet ogre.", image: "images/Panique.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694385902243679510" },
 
   { day: 8, title: "Puant", text: "Ajoute ici le texte de ce fragment.", image: "images/Puant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7694388725706509590" },
 
