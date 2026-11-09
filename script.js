@@ -115,7 +115,7 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 
 
-// GALERIE : ORDRE INKTObER
+// GALERIE : ORDRE INKTOBER
 function renderGallery() {
   gallery.innerHTML = "";
 
@@ -217,8 +217,12 @@ document.addEventListener("keydown", event => {
 });
 
 
-// JEU
+// =========================================
+// JEU : NUMEROS FIXES ET CARTES DEPLACABLES
+// =========================================
+
 let currentOrder = [];
+let selectedDay = null;
 let draggedDay = null;
 
 
@@ -247,207 +251,269 @@ function shuffle(items) {
 
 
 // ÉCHANGE DE DEUX CARTES
-function swapCards(firstIndex, secondIndex) {
-  if (
-    firstIndex < 0 ||
-    secondIndex < 0 ||
-    firstIndex >= currentOrder.length ||
-    secondIndex >= currentOrder.length ||
-    firstIndex === secondIndex
-  ) {
+function swapCards(firstDay, secondDay) {
+  if (firstDay === secondDay) {
     return;
   }
 
-  const temporary = currentOrder[firstIndex];
+  const firstIndex = currentOrder.findIndex(
+    fragment => fragment.day === firstDay
+  );
 
-  currentOrder[firstIndex] = currentOrder[secondIndex];
-  currentOrder[secondIndex] = temporary;
+  const secondIndex = currentOrder.findIndex(
+    fragment => fragment.day === secondDay
+  );
+
+  if (firstIndex === -1 || secondIndex === -1) {
+    return;
+  }
+
+  // Les cartes échangent leurs positions.
+  // Les numéros des cases ne changent jamais.
+  [
+    currentOrder[firstIndex],
+    currentOrder[secondIndex]
+  ] = [
+    currentOrder[secondIndex],
+    currentOrder[firstIndex]
+  ];
+
+  selectedDay = null;
+  draggedDay = null;
 
   status.textContent =
-    "Positions échangées — continuez ou vérifiez votre réponse.";
+    "Cartes échangées. Continuez ou vérifiez votre réponse.";
 
   renderGame();
 }
 
 
-// DÉPLACEMENT AVEC LES BOUTONS
-function moveCard(index, direction) {
-  const destination = index + direction;
-
-  if (destination < 0 || destination >= currentOrder.length) {
-    return;
-  }
-
-  swapCards(index, destination);
-}
-
-
-// AFFICHAGE DES CARTES ET DE LEURS NUMÉROS
+// AFFICHAGE DE LA GRILLE
 function renderGame() {
   wordList.innerHTML = "";
 
   currentOrder.forEach((fragment, index) => {
-    const card = document.createElement("div");
 
+    // L'emplacement est créé avec son numéro fixe.
+    const slot = document.createElement("div");
+    slot.className = "game-slot";
+    slot.dataset.position = index + 1;
+
+    // Numéro fixe de la case.
+    const number = document.createElement("span");
+    number.className = "slot-number";
+    number.textContent = index + 1;
+
+    // Carte qui peut changer de case.
+    const card = document.createElement("button");
+    card.type = "button";
     card.className = "word-card";
+    card.textContent = fragment.title;
     card.draggable = true;
 
-    // Le jour Inktober identifie la carte.
+    // Identifiant interne de la carte, invisible au joueur.
     card.dataset.day = fragment.day;
 
-    // Le numéro correspond à la position actuelle dans la grille.
-    const position = document.createElement("span");
-    position.className = "position-number";
-    position.textContent = index + 1;
-    position.setAttribute(
+    card.setAttribute(
       "aria-label",
-      `Position ${index + 1}`
+      `${fragment.title}. Position ${index + 1}.`
     );
 
-    const label = document.createElement("span");
-    label.className = "card-title";
-    label.textContent = fragment.title;
+    if (selectedDay === fragment.day) {
+      card.classList.add("selected");
+      card.setAttribute("aria-pressed", "true");
+    } else {
+      card.setAttribute("aria-pressed", "false");
+    }
 
-    // Boutons de déplacement pour ordinateur et téléphone.
-    const controls = document.createElement("div");
-    controls.className = "move-controls";
-
-    const previousButton = document.createElement("button");
-    previousButton.type = "button";
-    previousButton.textContent = "−";
-    previousButton.title = "Déplacer vers une position précédente";
-    previousButton.setAttribute(
-      "aria-label",
-      `Déplacer ${fragment.title} vers une position précédente`
-    );
-    previousButton.disabled = index === 0;
-
-    previousButton.addEventListener("click", event => {
-      event.stopPropagation();
-      moveCard(index, -1);
-    });
-
-    const nextButton = document.createElement("button");
-    nextButton.type = "button";
-    nextButton.textContent = "+";
-    nextButton.title = "Déplacer vers une position suivante";
-    nextButton.setAttribute(
-      "aria-label",
-      `Déplacer ${fragment.title} vers une position suivante`
-    );
-    nextButton.disabled = index === currentOrder.length - 1;
-
-    nextButton.addEventListener("click", event => {
-      event.stopPropagation();
-      moveCard(index, 1);
-    });
-
-    controls.append(previousButton, nextButton);
-
-    card.append(position, label, controls);
-
-
-    // GLISSER-DÉPOSER
-    card.addEventListener("dragstart", event => {
-      draggedDay = fragment.day;
-
-      card.classList.add("dragging");
-
-      if (event.dataTransfer) {
-        event.dataTransfer.effectAllowed = "move";
-        event.dataTransfer.setData(
-          "text/plain",
-          String(fragment.day)
-        );
-      }
-    });
-
-    card.addEventListener("dragend", () => {
-      draggedDay = null;
-
-      wordList.querySelectorAll(".dragging, .over")
-        .forEach(element => {
-          element.classList.remove("dragging", "over");
-        });
-    });
-
-    card.addEventListener("dragover", event => {
-      event.preventDefault();
-
-      if (draggedDay !== null && draggedDay !== fragment.day) {
-        card.classList.add("over");
-      }
-    });
-
-    card.addEventListener("dragleave", () => {
-      card.classList.remove("over");
-    });
-
-    card.addEventListener("drop", event => {
-      event.preventDefault();
-      card.classList.remove("over");
-
-      const sourceDay =
-        draggedDay !== null
-          ? draggedDay
-          : Number(event.dataTransfer?.getData("text/plain"));
-
-      if (!sourceDay || sourceDay === fragment.day) {
-        return;
-      }
-
-      const fromIndex = currentOrder.findIndex(
-        item => item.day === sourceDay
-      );
-
-      const toIndex = currentOrder.findIndex(
-        item => item.day === fragment.day
-      );
-
-      swapCards(fromIndex, toIndex);
-      draggedDay = null;
-    });
-
-    wordList.appendChild(card);
+    slot.append(number, card);
+    wordList.appendChild(slot);
   });
 }
 
 
-// NOUVELLE PARTIE
+// =========================================
+// GLISSER-DÉPOSER AVEC UNE SOURIS
+// =========================================
+
+// Début du déplacement.
+wordList.addEventListener("dragstart", event => {
+  const card = event.target.closest(".word-card");
+
+  if (!card) return;
+
+  draggedDay = Number(card.dataset.day);
+
+  card.classList.add("dragging");
+
+  if (event.dataTransfer) {
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData(
+      "text/plain",
+      String(draggedDay)
+    );
+  }
+});
+
+
+// Autoriser le dépôt sur une case.
+wordList.addEventListener("dragover", event => {
+  const slot = event.target.closest(".game-slot");
+
+  if (!slot) return;
+
+  event.preventDefault();
+
+  slot.classList.add("drag-over");
+});
+
+
+// Retirer l'effet visuel quand on quitte une case.
+wordList.addEventListener("dragleave", event => {
+  const slot = event.target.closest(".game-slot");
+
+  if (slot && !slot.contains(event.relatedTarget)) {
+    slot.classList.remove("drag-over");
+  }
+});
+
+
+// Déposer une carte sur une autre case.
+wordList.addEventListener("drop", event => {
+  const slot = event.target.closest(".game-slot");
+
+  if (!slot) return;
+
+  event.preventDefault();
+
+  const targetCard = slot.querySelector(".word-card");
+
+  const targetDay = targetCard
+    ? Number(targetCard.dataset.day)
+    : null;
+
+  const sourceDay = draggedDay;
+
+  wordList.querySelectorAll(".game-slot").forEach(item => {
+    item.classList.remove("drag-over");
+  });
+
+  if (
+    sourceDay !== null &&
+    targetDay !== null &&
+    sourceDay !== targetDay
+  ) {
+    swapCards(sourceDay, targetDay);
+  }
+});
+
+
+// Fin du glisser-déposer.
+wordList.addEventListener("dragend", () => {
+  draggedDay = null;
+
+  wordList.querySelectorAll(".dragging, .drag-over").forEach(item => {
+    item.classList.remove("dragging", "drag-over");
+  });
+});
+
+
+// =========================================
+// JEU SUR TELEPHONE ET PAR CLIC
+// =========================================
+
+// Premier toucher : sélectionner une carte.
+// Deuxième toucher : échanger avec une autre carte.
+wordList.addEventListener("click", event => {
+  const card = event.target.closest(".word-card");
+
+  if (!card) return;
+
+  const clickedDay = Number(card.dataset.day);
+
+  // Première carte sélectionnée.
+  if (selectedDay === null) {
+    selectedDay = clickedDay;
+
+    renderGame();
+
+    const selectedFragment = fragments.find(
+      fragment => fragment.day === clickedDay
+    );
+
+    status.textContent =
+      `« ${selectedFragment.title} » sélectionné. Touchez une autre carte pour échanger leurs places.`;
+
+    return;
+  }
+
+  // Deuxième toucher sur la même carte : annuler.
+  if (selectedDay === clickedDay) {
+    selectedDay = null;
+
+    renderGame();
+
+    status.textContent = "Sélection annulée.";
+
+    return;
+  }
+
+  // Deuxième carte : échange.
+  swapCards(selectedDay, clickedDay);
+});
+
+
+// =========================================
+// MELANGER LES CARTES
+// =========================================
+
 function startGame() {
   currentOrder = shuffle(fragments);
 
-  status.textContent =
-    "Les cartes ont été mélangées. À vous de jouer !";
+  selectedDay = null;
+  draggedDay = null;
 
   renderGame();
+
+  status.textContent =
+    "Les 31 cartes ont été mélangées. À vous de jouer !";
 }
 
 
-// BOUTON MÉLANGER
-document.getElementById("shuffleButton")
-  .addEventListener("click", startGame);
+// =========================================
+// VERIFIER LES REPONSES
+// =========================================
 
+function checkGame() {
+  let correctCount = 0;
 
-// BOUTON VÉRIFIER
-document.getElementById("checkButton")
-  .addEventListener("click", () => {
-
-    const placed = currentOrder.filter(
-      (fragment, index) =>
-        fragment.chronologicalOrder === index + 1
-    ).length;
-
-    if (placed === fragments.length) {
-      status.textContent =
-        "Bravo ! Vous avez reconstitué l’histoire dans le bon ordre ✨";
-    } else {
-      status.textContent =
-        `${placed} carte(s) bien placée(s) sur ${fragments.length}. Essayez encore !`;
+  currentOrder.forEach((fragment, index) => {
+    if (fragment.chronologicalOrder === index + 1) {
+      correctCount++;
     }
   });
 
+  if (correctCount === fragments.length) {
+    status.textContent =
+      "Bravo ! Vous avez reconstitué toute l'histoire de Cécilia ! ✨";
+  } else {
+    status.textContent =
+      `${correctCount} carte(s) bien placée(s) sur ${fragments.length}. Continuez !`;
+  }
+}
 
+
+// BOUTONS DU JEU
+document.getElementById("shuffleButton")
+  .addEventListener("click", startGame);
+
+document.getElementById("checkButton")
+  .addEventListener("click", checkGame);
+
+
+// =========================================
 // INITIALISATION
+// =========================================
+
 renderGallery();
 startGame();
