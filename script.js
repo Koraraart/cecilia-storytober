@@ -10,7 +10,7 @@
     */
 
     const fragments = [
-      { day: 1,  title: "Pomme", text: "Tout a commencé avec une pomme, un moment de tentation, mais ça n’a pas été un choix fait en pleine conscience… et cela n’était que le début. ", image: "images/Defense-elephant.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7691751088088894723" },
+      { day: 1,  title: "Pomme", text: "Tout a commencé avec une pomme, un moment de tentation, mais ça n’a pas été un choix fait en pleine conscience… et cela n’était que le début. ", image: "images/Pomme.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7691751088088894723" },
       { day: 2,  title: "Relique", text: "Ajoute ici le texte de ce fragment.", image: "images/Relique.jpg", speedpaint: "" },
       { day: 3,  title: "Miniature", text: "Ajoute ici le texte de ce fragment.", image: "images/Cactus.jpg", speedpaint: "" },
       { day: 4,  title: "Cactus", text: "Ajoute ici le texte de ce fragment.", image: "images/Pomme.jpg", speedpaint: "" },
