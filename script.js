@@ -1,4 +1,3 @@
-
 /*
   CÉCILIA — Une histoire en 31 fragments
 
@@ -71,13 +70,14 @@ const fragments = [
   { day: 31, title: "Frimer", text: "Remplace par ton titre et ton texte.", image: "images/Fragment-31.jpg", speedpaint: "" }
 ];
 
+
 // CORRESPONDANCE CHRONOLOGIQUE
 // Chaque nombre représente le jour de galerie correspondant
-// à la position chronologique indiquée par son emplacement.
+// à la position chronologique indiquée.
 //
-// Position chronologique 1 = galerie 3
-// Position chronologique 2 = galerie 16
-// Position chronologique 3 = galerie 29
+// Position 1 = galerie 3 : Miniature
+// Position 2 = galerie 16 : Dégingandé
+// Position 3 = galerie 29 : Défense d'éléphant
 
 const chronologicalGalleryDays = [
   3, 16, 29, 4, 5, 26, 9, 7,
@@ -86,13 +86,15 @@ const chronologicalGalleryDays = [
   13, 22, 25, 2, 10, 24, 30
 ];
 
-// Attribution automatique de l'ordre chronologique
+
+// ATTRIBUTION DE L'ORDRE CHRONOLOGIQUE
 fragments.forEach(fragment => {
   fragment.chronologicalOrder =
     chronologicalGalleryDays.indexOf(fragment.day) + 1;
 });
 
-// Vérification des données
+
+// VÉRIFICATION DES DONNÉES
 const mappingIsValid =
   chronologicalGalleryDays.length === fragments.length &&
   new Set(chronologicalGalleryDays).size === fragments.length &&
@@ -104,6 +106,7 @@ if (!mappingIsValid) {
   console.error("Erreur dans la correspondance chronologique !");
 }
 
+
 // ÉLÉMENTS HTML
 const gallery = document.getElementById("galleryGrid");
 const wordList = document.getElementById("wordList");
@@ -111,7 +114,8 @@ const status = document.getElementById("gameStatus");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 
-// GALERIE : ordre Inktober
+
+// GALERIE : ORDRE INKTObER
 function renderGallery() {
   gallery.innerHTML = "";
 
@@ -136,9 +140,11 @@ function renderGallery() {
 
       img.onerror = () => {
         imageButton.innerHTML = "";
+
         const placeholder = document.createElement("span");
         placeholder.className = "image-placeholder";
         placeholder.textContent = fragment.title;
+
         imageButton.appendChild(placeholder);
       };
 
@@ -171,6 +177,7 @@ function renderGallery() {
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.textContent = "Voir le speedpaint ↗";
+
         copy.appendChild(link);
       }
 
@@ -178,6 +185,7 @@ function renderGallery() {
       gallery.appendChild(card);
     });
 }
+
 
 // LIGHTBOX
 function openLightbox(src, alt) {
@@ -196,17 +204,23 @@ function closeLightbox() {
 document.getElementById("closeLightbox")
   .addEventListener("click", closeLightbox);
 
-lightbox.addEventListener("click", e => {
-  if (e.target === lightbox) closeLightbox();
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
 });
 
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeLightbox();
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
 });
+
 
 // JEU
 let currentOrder = [];
-let draggedItem = null;
+let draggedDay = null;
+
 
 // MÉLANGE DES CARTES
 function shuffle(items) {
@@ -214,14 +228,16 @@ function shuffle(items) {
 
   for (let i = result.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
+
     [result[i], result[j]] = [result[j], result[i]];
   }
 
-  // Évite de commencer avec le bon ordre.
+  // Évite de commencer par hasard avec le bon ordre.
   if (
     result.every((item, index) =>
       item.chronologicalOrder === index + 1
-    ) && result.length > 1
+    ) &&
+    result.length > 1
   ) {
     [result[0], result[1]] = [result[1], result[0]];
   }
@@ -229,46 +245,136 @@ function shuffle(items) {
   return result;
 }
 
-// AFFICHAGE DES CARTES
+
+// ÉCHANGE DE DEUX CARTES
+function swapCards(firstIndex, secondIndex) {
+  if (
+    firstIndex < 0 ||
+    secondIndex < 0 ||
+    firstIndex >= currentOrder.length ||
+    secondIndex >= currentOrder.length ||
+    firstIndex === secondIndex
+  ) {
+    return;
+  }
+
+  const temporary = currentOrder[firstIndex];
+
+  currentOrder[firstIndex] = currentOrder[secondIndex];
+  currentOrder[secondIndex] = temporary;
+
+  status.textContent =
+    "Positions échangées — continuez ou vérifiez votre réponse.";
+
+  renderGame();
+}
+
+
+// DÉPLACEMENT AVEC LES BOUTONS
+function moveCard(index, direction) {
+  const destination = index + direction;
+
+  if (destination < 0 || destination >= currentOrder.length) {
+    return;
+  }
+
+  swapCards(index, destination);
+}
+
+
+// AFFICHAGE DES CARTES ET DE LEURS NUMÉROS
 function renderGame() {
   wordList.innerHTML = "";
 
-  currentOrder.forEach(fragment => {
+  currentOrder.forEach((fragment, index) => {
     const card = document.createElement("div");
+
     card.className = "word-card";
     card.draggable = true;
 
-    // Identifiant = jour de la galerie
+    // Le jour Inktober identifie la carte.
     card.dataset.day = fragment.day;
 
-    const grip = document.createElement("span");
-    grip.className = "grip";
-    grip.textContent = "↕";
+    // Le numéro correspond à la position actuelle dans la grille.
+    const position = document.createElement("span");
+    position.className = "position-number";
+    position.textContent = index + 1;
+    position.setAttribute(
+      "aria-label",
+      `Position ${index + 1}`
+    );
 
     const label = document.createElement("span");
+    label.className = "card-title";
     label.textContent = fragment.title;
 
-    card.append(grip, label);
+    // Boutons de déplacement pour ordinateur et téléphone.
+    const controls = document.createElement("div");
+    controls.className = "move-controls";
 
-    card.addEventListener("dragstart", () => {
-      draggedItem = card;
+    const previousButton = document.createElement("button");
+    previousButton.type = "button";
+    previousButton.textContent = "−";
+    previousButton.title = "Déplacer vers une position précédente";
+    previousButton.setAttribute(
+      "aria-label",
+      `Déplacer ${fragment.title} vers une position précédente`
+    );
+    previousButton.disabled = index === 0;
+
+    previousButton.addEventListener("click", event => {
+      event.stopPropagation();
+      moveCard(index, -1);
+    });
+
+    const nextButton = document.createElement("button");
+    nextButton.type = "button";
+    nextButton.textContent = "+";
+    nextButton.title = "Déplacer vers une position suivante";
+    nextButton.setAttribute(
+      "aria-label",
+      `Déplacer ${fragment.title} vers une position suivante`
+    );
+    nextButton.disabled = index === currentOrder.length - 1;
+
+    nextButton.addEventListener("click", event => {
+      event.stopPropagation();
+      moveCard(index, 1);
+    });
+
+    controls.append(previousButton, nextButton);
+
+    card.append(position, label, controls);
+
+
+    // GLISSER-DÉPOSER
+    card.addEventListener("dragstart", event => {
+      draggedDay = fragment.day;
+
       card.classList.add("dragging");
+
+      if (event.dataTransfer) {
+        event.dataTransfer.effectAllowed = "move";
+        event.dataTransfer.setData(
+          "text/plain",
+          String(fragment.day)
+        );
+      }
     });
 
     card.addEventListener("dragend", () => {
-      card.classList.remove("dragging");
+      draggedDay = null;
 
-      wordList.querySelectorAll(".over").forEach(el => {
-        el.classList.remove("over");
-      });
-
-      draggedItem = null;
+      wordList.querySelectorAll(".dragging, .over")
+        .forEach(element => {
+          element.classList.remove("dragging", "over");
+        });
     });
 
-    card.addEventListener("dragover", e => {
-      e.preventDefault();
+    card.addEventListener("dragover", event => {
+      event.preventDefault();
 
-      if (draggedItem && draggedItem !== card) {
+      if (draggedDay !== null && draggedDay !== fragment.day) {
         card.classList.add("over");
       }
     });
@@ -277,34 +383,35 @@ function renderGame() {
       card.classList.remove("over");
     });
 
-    card.addEventListener("drop", e => {
-      e.preventDefault();
+    card.addEventListener("drop", event => {
+      event.preventDefault();
       card.classList.remove("over");
 
-      if (!draggedItem || draggedItem === card) return;
+      const sourceDay =
+        draggedDay !== null
+          ? draggedDay
+          : Number(event.dataTransfer?.getData("text/plain"));
 
-      const from = currentOrder.findIndex(
-        item => item.day === Number(draggedItem.dataset.day)
+      if (!sourceDay || sourceDay === fragment.day) {
+        return;
+      }
+
+      const fromIndex = currentOrder.findIndex(
+        item => item.day === sourceDay
       );
 
-      const to = currentOrder.findIndex(
-        item => item.day === Number(card.dataset.day)
+      const toIndex = currentOrder.findIndex(
+        item => item.day === fragment.day
       );
 
-      if (from === -1 || to === -1) return;
-
-      const moved = currentOrder.splice(from, 1)[0];
-      currentOrder.splice(to, 0, moved);
-
-      status.textContent =
-        "Ordre modifié — continuez ou vérifiez votre réponse.";
-
-      renderGame();
+      swapCards(fromIndex, toIndex);
+      draggedDay = null;
     });
 
     wordList.appendChild(card);
   });
 }
+
 
 // NOUVELLE PARTIE
 function startGame() {
@@ -316,25 +423,22 @@ function startGame() {
   renderGame();
 }
 
+
 // BOUTON MÉLANGER
 document.getElementById("shuffleButton")
   .addEventListener("click", startGame);
 
+
 // BOUTON VÉRIFIER
 document.getElementById("checkButton")
   .addEventListener("click", () => {
-
-    const correct = currentOrder.every(
-      (fragment, index) =>
-        fragment.chronologicalOrder === index + 1
-    );
 
     const placed = currentOrder.filter(
       (fragment, index) =>
         fragment.chronologicalOrder === index + 1
     ).length;
 
-    if (correct) {
+    if (placed === fragments.length) {
       status.textContent =
         "Bravo ! Vous avez reconstitué l’histoire dans le bon ordre ✨";
     } else {
@@ -342,6 +446,7 @@ document.getElementById("checkButton")
         `${placed} carte(s) bien placée(s) sur ${fragments.length}. Essayez encore !`;
     }
   });
+
 
 // INITIALISATION
 renderGallery();
