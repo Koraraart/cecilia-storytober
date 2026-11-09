@@ -17,7 +17,7 @@ const fragments = [
 
   { day: 5, title: "Claque", text: "Hmpf, Il n’avait jamais osé lever ma main sur elle. Avant….il l’aimé. Et Pourtant cette amour filiale a pourtant ses limites.", image: "images/Claque.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7693273777374874902" },
 
-  { day: 6, title: "Ogre", text: "Ajoute ici le texte de ce fragment.", image: "images/Bidule.jpg", speedpaint: "" },
+  { day: 6, title: "Ogre", text: "Vous savez tout s’achète, Cet homme…est répugnant, il fréquente les salons mondains, il a de multiples fiancées qu’il a fait parfois disparaitre, tout le monde rampe à ses pieds y compris les parents de Cécilia.", image: "images/Ogre.jpg", speedpaint: "https://www.tiktok.com/@korara_art/video/7693630197089717526" },
 
   { day: 7, title: "Panique", text: "Ajoute ici le texte de ce fragment.", image: "images/Cuisiner.jpg", speedpaint: "" },
 
